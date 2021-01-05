@@ -32,4 +32,10 @@ export class ItemComponent implements OnInit {
     this.gameServiceObs = this.service.gamesDetails(gameId) ;
     this.gameServiceObs.subscribe((data)=>this.games = data)
   }
+
+   back() : void
+  {
+    this.location.back();
+  }
+
 }
