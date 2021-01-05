@@ -1,1 +1,16 @@
-<p>item works!</p>
+<h1 class = "text-primary">game detail</h1>
+<p></p>
+<div class="row">
+  <div class= "col-sm-6 col-lg-3">
+  <img src="{{games.background_image}}" class="img-thumbnail">
+  </div>
+  <div class="col-sm-8 col-lg-4">
+    <h5><b>{{games.name}}</b></h5>
+    <p><b>Description:</b>{{games.description}}</p>
+    <p><b>Released: </b>{{games.released}}</p>
+    <p><b>Rating: </b>{{games.rating}}</p>
+    <p><b>Genres:</b></p>
+    <ul *ngFor = "let g of games.genres"><li>{{g.name}}</li></ul>
+    <div *ngIf = "games.website"><p><b>Website:</b></p><a href = "{{games.website}}">{{games.website}}</a></div>
+  </div>
+</div>
