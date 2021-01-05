@@ -7,7 +7,6 @@ const routes: Routes = [
   { path: 'search', component: SearchVideogameComponent },
   { path: 'item/:id', component: ItemComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

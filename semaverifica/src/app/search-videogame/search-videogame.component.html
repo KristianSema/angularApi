@@ -1,1 +1,18 @@
-<p>search-videogame works!</p>
+<h2 class="text-primary">Search</h2>
+<p>
+  <input type="text" #newquery>
+  <button class = "btn btn-outline-primary" (click)="submit(newquery)">Search</button>
+</p>
+<div class = 'card-columns'>
+<div *ngFor = "let res of results.results">
+  <div class="card border-primary" style="width: 18rem;">
+  <div *ngIf = "res.background_image">
+  <img class="card-img-top" src="{{res.background_image}}" alt="Card image cap">
+  </div>
+  <div class="card-body">
+    <a class="card-title" [routerLink]="['/item', res.id]">{{res.name}}</a>
+  </div>
+  </div>
+
+</div>
+</div>
